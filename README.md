@@ -19,4 +19,10 @@ El desarrollo modular de software es una técnica que divide un programa grande 
     - Crecimiento simple: Se pueden añadir funciones nuevas sin rehacer todo el sistema.
     
 ___
-Clase 08/09/2026
+Clase 21/09/2026
+
+Para trabajar con nuestro modelo de datos, usaremos el ORM SQLAlchemy, el que instalaremos con el siguiente comando:
+
+```
+pip install sqlalchemy mysqlclient
+```
