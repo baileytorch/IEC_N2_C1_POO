@@ -1,6 +1,9 @@
 # IEC_N2_C1_POO
 Proyecto Modular de POO
 
+Usuario DB: 'iec_n2_c1' 
+Password DB: 'iecn2c1';
+
 ___
 Clase 07/09/2026
 
@@ -21,17 +24,18 @@ El desarrollo modular de software es una técnica que divide un programa grande 
 ___
 Clase 21/09/2026
 
-Instalación ORM + Driver de base de datos
+* Instalación ORM + Driver de base de datos. Mediante terminal de VSCode o CMD ejecutaremos el siguiente comando:
 ```
 pip install peewee pymysql
 ```
+- Peewee es el ORM que utilizaremos para procesar los datos.
+- Pymysql es el driver que permitirá la conexión con la base de datos.
 
-Para usar las herraientas de automatización de peewee necesitamos crear un usuario con permisos y seguridad en nuestra base de datos.
+Para usar las herramientas de automatización de peewee necesitamos crear un usuario con permisos y seguridad en nuestra base de datos.
 * Crear usuario local 'Usuario' con contraseña 'mypassword'
 ```
 CREATE USER 'Usuario'@'localhost' IDENTIFIED BY 'mypassword';
 ```
-o
 
 * Crear usuario remoto 'Usuario' con contraseña 'mypassword'
 ```
@@ -67,3 +71,5 @@ Creacion de modelo de forma automatica:
 ```
 python -m pwiz -e mysql -H localhost -p 3306 -u your_username -P your_database_name > models.py
 ```
+___
+*ORM* Object Relational Mapping. Estas librerías se encargan de ofrecer clases y métodos para que podamos manipular la base de datos usando programación orientada a objetos.
