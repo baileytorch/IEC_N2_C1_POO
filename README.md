@@ -22,7 +22,14 @@ ___
 Clase 21/09/2026
 
 Para trabajar con nuestro modelo de datos, usaremos el ORM SQLAlchemy, el que instalaremos con el siguiente comando:
-
 ```
 pip install sqlalchemy mysqlclient
 ```
+
+Opcion 2, peewee...
+```
+pip install peewee pymysql
+```
+
+Creacion de modelo de forma automatica:
+python -m pwiz -e mysql -H localhost -p 3306 -u your_username -P your_database_name > models.py
