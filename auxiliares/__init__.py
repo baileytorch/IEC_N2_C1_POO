@@ -1,2 +1,2 @@
 from auxiliares.info_app import nombre_app,version_app,defecto,opcion_volver,opcion_invalida
-from auxiliares.opciones_menu import menu_superior,sub_menu_biblioteca,sub_menu_libros,sub_menu_prestamos
+from auxiliares.opciones_menu import menu_superior,menu_biblioteca,menu_libros,menu_prestamos
