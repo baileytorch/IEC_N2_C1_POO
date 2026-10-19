@@ -14,10 +14,15 @@ def mostrar_paises():
 
 def solicitar_datos_pais():
     try:
-        pais = input(mensaje_nombre_pais)
-        nacionalidad = input('\nIngrese nacionalidad: ')
-        iso2 = input('Ingrese ISO 2 del país: ')
-        iso3 = input('Ingrese ISO 3 del país: ')
+        pais, nacionalidad, iso2, iso3 = ''
+        while pais == '':
+            pais = input(mensaje_nombre_pais)
+        while nacionalidad == '':
+            nacionalidad = input('\nIngrese nacionalidad: ')
+        while iso2 == '':
+            iso2 = input('Ingrese ISO 2 del país: ')
+        while iso3 == '':
+            iso3 = input('Ingrese ISO 3 del país: ')
         return(pais, nacionalidad, iso2, iso3)
     except Exception as error:
         print(f'{mensaje_error}{error}')
