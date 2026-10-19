@@ -2,7 +2,7 @@ import sys
 from auxiliares import nombre_app,version_app
 from auxiliares import menu_superior,sub_menu_biblioteca,sub_menu_libros,sub_menu_prestamos
 from auxiliares import opcion_volver,opcion_invalida
-from presentacion.presentacion_pais import modificar_pais
+from presentacion.presentacion_pais import eliminar_pais,mostrar_paises
 
 def menu_principal():
     print(f'{nombre_app} v{version_app}')
@@ -23,7 +23,7 @@ def menu_principal():
                     opcion_biblioteca = input(f'Ingrese su opción [0-{len(sub_menu_biblioteca)-1}]')
                     match opcion_biblioteca:
                         case '1':
-                            modificar_pais()
+                            mostrar_paises()
                         case '2':
                             pass
                         case '3':
