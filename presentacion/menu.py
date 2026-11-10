@@ -8,10 +8,11 @@ from auxiliares import (
     nombre_app,
     opcion_invalida,
     opcion_volver,
-    version_app,
+    version_app
 )
 from auxiliares.opciones_menu import menu_reportes
 from presentacion.presentacion_pais import mostrar_paises
+from presentacion.presentacion_usuario import mostrar_usuarios
 
 
 def _ejecutar_menu(
@@ -36,7 +37,11 @@ def _ejecutar_menu(
 
 
 def _menu_biblioteca() -> None:
-    _ejecutar_menu(menu_biblioteca, {'1': mostrar_paises})
+    _ejecutar_menu(menu_biblioteca, {
+        '1': mostrar_paises,
+        '3': mostrar_usuarios
+        }
+    )
 
 
 def _menu_libros() -> None:

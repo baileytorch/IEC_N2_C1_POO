@@ -1,0 +1,2 @@
+ALTER TABLE usuarios ENGINE=INNODB;
+ALTER TABLE usuarios ADD UNIQUE(correo);
