@@ -10,9 +10,10 @@ def lista_usuarios(tabla_usuarios: PrettyTable):
     try:
         tabla_usuarios.field_names = ['Id', 'RUT', 'Nombre Completo', 'Correo', 'Nacionalidad', 'Fecha Nacimiento', 'Género', 'Habilitado']
         usuarios = listado_usuarios_habilitados()
-        for usuario in usuarios:
-            nombre_completo = f'{usuario.nombre} {usuario.apellido}'
-            tabla_usuarios.add_row([usuario.id_usuario, usuario.rut, nombre_completo, usuario.correo, usuario.pais, usuario.fecha_nacimiento, usuario.genero, ('Deshabilitado','Habilitado')[usuario.habilitado]])
+        if usuarios is not None:
+            for usuario in usuarios:
+                nombre_completo = f'{usuario.nombre} {usuario.apellido}'
+                tabla_usuarios.add_row([usuario.id_usuario, usuario.rut, nombre_completo, usuario.correo, usuario.pais, usuario.fecha_nacimiento, usuario.genero, ('Deshabilitado','Habilitado')[usuario.habilitado]])
         
     except Exception as error:
         print(f'{mensaje_error}{error}')

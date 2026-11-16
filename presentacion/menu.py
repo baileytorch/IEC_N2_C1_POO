@@ -12,7 +12,7 @@ from auxiliares import (
 )
 from auxiliares.opciones_menu import menu_reportes
 from presentacion.presentacion_pais import mostrar_paises
-from presentacion.presentacion_usuario import mostrar_usuarios
+from presentacion.presentacion_usuario import mostrar_usuarios,solicitar_datos_usuario
 
 
 def _ejecutar_menu(
@@ -39,6 +39,7 @@ def _ejecutar_menu(
 def _menu_biblioteca() -> None:
     _ejecutar_menu(menu_biblioteca, {
         '1': mostrar_paises,
+        '2': solicitar_datos_usuario,
         '3': mostrar_usuarios
         }
     )

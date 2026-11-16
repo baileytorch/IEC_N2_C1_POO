@@ -2,7 +2,7 @@ from negocio.negocio_usuarios import lista_usuarios,crear_objeto_usuario
 from datos.repositorios.repo_pais import obtener_pais_nombre
 from prettytable import PrettyTable
 from auxiliares.info_app import mensaje_nombre_pais,mensaje_error
-from auxiliares.validaciones import validar_rut,validar_genero
+from auxiliares.validaciones import validar_rut,validar_correo,validar_genero
 
 def mostrar_usuarios():
     tabla_usuarios = PrettyTable()
@@ -33,6 +33,8 @@ def solicitar_datos_usuario():
             
         while correo == '':
             correo = input('\nCorreo: ')
+            correo, mensaje = validar_correo(correo)
+            print(mensaje)
         
         while pais == '':
             pais = input('\nNacionalidad: ')
@@ -63,7 +65,7 @@ def agregar_usuario():
     except Exception as error:
         print(f'{mensaje_error}{error}')
 
-def modificar_pais():
+def modificar_usuario():
     try:
         nombre_pais = input(mensaje_nombre_pais)
         pais_encontrado = obtener_pais_nombre(nombre_pais)
